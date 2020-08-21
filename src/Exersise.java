@@ -9,23 +9,24 @@ public class Exersise {
 		char upperCase = 0;
 		char lowerCase = 0;
 		String s = "";
-		String s2 = "";
+		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < ch.length; ++i) {
 			if (Character.isLowerCase(ch[i])) {
+
 				upperCase = Character.toUpperCase(ch[i]);
-				s = Character.toString(upperCase);
-				System.out.print(s);
+				sb.append(Character.toString(upperCase));
 
 			} else {
 				lowerCase = Character.toLowerCase(ch[i]);
-				s2 = Character.toString(lowerCase);
-				System.out.print(s2);
+				sb.append(Character.toString(lowerCase));
 
 			}
+			s = sb.toString();
 
 		}
-		return str;
+
+		return s;
 
 	}
 
